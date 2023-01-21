@@ -1,0 +1,44 @@
+.global {
+
+	display: flex;
+	width: 80%;
+
+}
+
+.header {
+
+	composes: global;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.section {
+
+	composes: global;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+}
+
+
+.btn {
+
+	composes: btn from 'Header.module.css';
+	width: 50%;
+
+}
+
+.input {
+
+	padding: var(--space-3xs);
+	outline: none;
+
+}
+
+.btn:hover {
+
+  background-color: var(--buttons-color);
+  color: #fff;
+  
+}

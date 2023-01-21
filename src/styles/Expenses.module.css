@@ -1,0 +1,90 @@
+.modalExpenses {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 80vw;
+	max-width: 50rem;
+	padding-bottom: var(--space-2xs);
+	border-radius: .2rem;
+	background-color: var(--child-bg-dark);
+	animation: animation-child-modal .2s ease forwards;
+
+}
+
+.header {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--space-3xs);
+
+}
+
+.headerSection {
+
+	display: flex;
+	align-items: center;
+	margin-left: var(--space-3xs);
+
+}
+
+.deleteBtn {
+
+	margin-left: var(--space-2xs);
+	padding: .25rem;
+	border: .1px solid #6666;
+	border-radius: .2rem;
+	background-color: transparent;
+	transition: background-color .2s ease;
+
+}
+
+.deleteBtn:hover {
+
+	color: #f9f9f9;
+	background-color: #f00;
+
+}
+
+.expenseList {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: var(--space-2xs);
+	max-height: 20rem;
+	min-height: 5rem;
+	overflow: auto;
+
+}
+
+.expense {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: var(--space-3xs);
+	text-align: center;
+
+}
+
+.expense > * {width: 33%;}
+
+@keyframes animation-child-modal {
+
+	0% {
+
+		opacity: 0;
+		transform: translateY(-10vh);
+
+	}
+
+	100% {
+
+		opacity: 1;
+		transform: translateY(0);
+
+	}
+
+}

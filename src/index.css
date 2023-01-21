@@ -1,0 +1,242 @@
+/* reset */
+
+*,*::before,*::after {
+
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+
+}
+
+/* globals styles */
+
+:root {
+
+	font-size: 16px;
+
+		/* spaces */
+
+  --space-3xs: clamp(0.31rem, calc(0.30rem + 0.06vw), 0.38rem);
+  --space-2xs: clamp(0.69rem, calc(0.68rem + 0.06vw), 0.75rem);
+  --space-xs: clamp(1.00rem, calc(0.98rem + 0.13vw), 1.13rem);
+  --space-s: clamp(1.31rem, calc(1.28rem + 0.19vw), 1.50rem);
+  --space-m: clamp(2.00rem, calc(1.95rem + 0.25vw), 2.25rem);
+  --space-l: clamp(2.63rem, calc(2.55rem + 0.38vw), 3.00rem);
+  --space-xl: clamp(3.94rem, calc(3.83rem + 0.56vw), 4.50rem);
+  --space-2xl: clamp(5.25rem, calc(5.10rem + 0.75vw), 6.00rem);
+  --space-3xl: clamp(7.88rem, calc(7.65rem + 1.13vw), 9.00rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.23rem + 0.44vw), 0.75rem);
+  --space-2xs-xs: clamp(0.69rem, calc(0.60rem + 0.44vw), 1.13rem);
+  --space-xs-s: clamp(1.00rem, calc(0.90rem + 0.50vw), 1.50rem);
+  --space-s-m: clamp(1.31rem, calc(1.13rem + 0.94vw), 2.25rem);
+  --space-m-l: clamp(2.00rem, calc(1.80rem + 1.00vw), 3.00rem);
+  --space-l-xl: clamp(2.63rem, calc(2.25rem + 1.88vw), 4.50rem);
+  --space-xl-2xl: clamp(3.94rem, calc(3.53rem + 2.06vw), 6.00rem);
+  --space-2xl-3xl: clamp(5.25rem, calc(4.50rem + 3.75vw), 9.00rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.31rem, calc(0.98rem + 1.69vw), 3.00rem);
+
+  /* font-size */
+
+  --step--3: clamp(0.77rem, calc(0.76rem + 0.01vw), 0.76rem);
+  --step--2: clamp(0.96rem, calc(0.90rem + 0.05vw), 0.91rem);
+  --step--1: clamp(1.20rem, calc(1.07rem + 0.11vw), 1.09rem);
+  --step-0: clamp(1.31rem, calc(1.28rem + 0.19vw), 1.50rem);
+  --step-1: clamp(1.58rem, calc(1.52rem + 0.30vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.80rem + 0.45vw), 2.34rem);
+  --step-3: clamp(2.27rem, calc(2.14rem + 0.66vw), 2.93rem);
+  --step-4: clamp(2.72rem, calc(2.53rem + 0.94vw), 3.66rem);
+  --step-5: clamp(3.27rem, calc(3.00rem + 1.31vw), 4.58rem);
+  --step-6: clamp(3.92rem, calc(3.56rem + 1.80vw), 5.72rem);
+
+  /* colors*/
+
+  --body-bg-dark : #000000;
+	--child-bg-dark: #131313;
+  --body-bg-light : #f9f9f9;
+	--child-bg-light: #fff;
+	--text-dark: #f9f9f9;
+	--text-light: #000;
+	--buttons-color: #2b219f;
+	--delete-color: #f00;
+	--opacity: 0;
+
+}
+
+/* regla para los iconos de fuente */
+
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("../fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
+url("../fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* No-component-styles */
+
+	select {
+
+		display: block;
+		padding: .45rem .2rem;
+		border: none;
+		background-color: #e6e6e6;
+
+	}
+
+	label {margin-bottom: var(--space-3xs);}
+
+	option {
+
+		display: block;
+		width: 100%;
+
+	}
+
+	button {border: none;}
+
+/* Component-styles */
+
+
+/* grid-cards */
+
+.grid-cards {
+
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill,minmax(18.75rem, 1fr));
+	gap: 1rem;
+	align-items: flex-start;
+	width: 90vw;
+	max-width: calc(64rem + 10vw);
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+/* icons */
+
+.bi-x::before {content: "\f62a";}
+.bi-x-square::before { content: "\f629"; }
+.bi-trash3::before { content: "\f78b"; }
+.bi-list::before { content: "\f479"; }
+
+/* Utility class */
+
+.bg-warning {background-color: #fdc723;}
+
+.mr-tp {margin-top: var(--space-3xs);}
+
+.mr-bt {margin-bottom:	var(--space-3xs);}
+
+.mr-tp-2 {margin-top: var(--space-2xs);}
+
+.mr-bt-2 {margin-bottom:	var(--space-2xs);}
+
+.mr-lf {margin-left: var(--space-3xs);}
+
+.mr-rg {margin-right:	var(--space-3xs);}
+
+.mr-lf-2 {margin-left: var(--space-2xs);}
+
+.mr-rg-2 {margin-right:	var(--space-2xs);}
+
+.pd-tp {padding-top: var(--space-3xs);}
+
+.pd-bt {padding-bottom:	var(--space-3xs);}
+
+.pd-tp-2 {padding-top: var(--space-2xs);}
+
+.pd-bt-2 {padding-bottom:	var(--space-2xs);}
+
+.pd-lf {padding-left: var(--space-3xs);}
+
+.pd-rg {padding-right:	var(--space-3xs);}
+
+.pd-lf-2 {padding-left: var(--space-2xs);}
+
+.pd-rg-2 {padding-right:	var(--space-2xs);}
+
+.d-flex {display: flex;}
+
+.fd-column {flex-direction: column;}
+
+.jc-sb {justify-content: space-between;}
+
+.jc-sa {justify-content: space-around;}
+
+.jc-se {justify-content: space-evenly;}
+
+.at-center {align-items: center;}
+
+.at-end {align-items: flex-end;}
+
+.bg-blue {background-color: #00f;}
+
+.bg-yellow {background-color: #fdc723;}
+
+.bg-red {background-color: #f00;}
+
+.exceded {background-color: #f00;}
+
+.fs--3 {font-size: var(--step--3);}
+.fs--2 {font-size: var(--step--2);}
+.fs--1 {font-size: var(--step--1);}
+.fs-0 {font-size: var(--step-0);}
+.fs-1 {font-size: var(--step-1);}
+.fs-2 {font-size: var(--step-2);}
+.fs-3 {font-size: var(--step-3);}
+.fs-4 {font-size: var(--step-4);}
+.fs-5 {font-size: var(--step-5);}
+.fs-6 {font-size: var(--step-6);}
+
+
+
+.hover-delete-btn:hover {
+
+	background-color: var(--delete-color);
+	color: var(--text-white);
+
+}
+
+.dark {
+
+	background-color: var(--body-bg-dark);
+	color: var(--text-dark);
+
+}
+
+.light {
+
+	background-color: var(--body-bg-light);
+	color: var(--text-light);
+
+}
+
+.child-bg-dark {background-color: var(--child-bg-dark);}
+
+.child-bg-light {background-color: var(--child-bg-light);}
+
+.text-dark {color: var(--text-dark);}
+
+.text-light {color: var(--text-light);}
+
+.dark .button {border: none;}

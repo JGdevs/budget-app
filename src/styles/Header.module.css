@@ -1,0 +1,126 @@
+/* header */
+
+.header {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: calc(64rem + 5vw);
+	margin-top: var(--space-2xs);
+	margin-left: auto;
+	margin-right: auto;	
+
+}
+
+.headerButtons {
+
+	display: none;
+	align-items: center;
+
+}
+
+.btn {
+
+	display: inline-block;
+	width: fit-content;
+	padding: .6rem;
+	font-size: var(--step--2);
+	text-align: center;
+	border-radius: .30rem;
+  color: var(--buttons-color);
+  border: thin solid var(--buttons-color);
+  background-color: var(--body-bg-light);
+  transition: background-color .2s ease;
+
+}
+
+
+.btn:hover {
+
+  background-color: var(--buttons-color);
+  color: #fff;
+  
+}
+
+.btnBlue {
+
+  composes: btn;
+  background-color: var(--buttons-color);
+  color: #ffffff;
+  border: thin solid var(--buttons-color);
+
+}
+
+.i {
+
+  font-size: var(--step-2);
+  margin-right: var(--space-3xs);
+
+}
+
+/* menu-mobile */
+
+.panel {
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0005;
+  animation: animation-modal .2s ease forwards;
+  
+}
+
+.menuContainer {
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 15rem;
+  background-color: #ccc;
+  animation: menu-animation .4s ease forwards;
+
+}
+
+.menuHeader {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+.asideMenu {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30%; 
+  margin-left: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.hidden {display: none;}
+
+.active {display: block;}
+
+
+@media screen and (width >= 48rem) {
+
+  .headerButtons {display: flex;}
+
+  .i {display: none;}
+
+}
+
+@keyframes menu-animation {
+  
+  0% {transform: translateX(-100%);}
+
+  100% {transform: translateX(0%);}
+
+}

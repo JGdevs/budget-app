@@ -1,0 +1,21 @@
+.card {
+
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	height: 10rem;
+	padding: var(--space-2xs);
+	border-radius: .7rem;
+	box-shadow: -.2px 1px 2.9px -1px #000;
+
+}
+
+.header {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.btn {composes: btn from 'Header.module.css';}

@@ -1,0 +1,73 @@
+/* budget-modal */
+
+.modal {
+
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0005;
+  animation: animation-modal .2s ease forwards;
+
+}
+
+.modalForm {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 70vh;
+	width: 90vw;
+	max-width: 40rem;
+	max-height: 25rem;
+	padding-bottom: var(--space-2xs);
+	border-radius: .2rem;
+	background-color: var(--child-bg-dark);
+	animation: animation-child-modal .2s ease forwards;
+
+}
+
+
+.titleForm {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+
+}
+
+.title-form-dark {border-bottom: thin solid #f9f9f9;}
+.title-form-light {border-bottom: thin solid #000;}
+
+@keyframes animation-modal {
+
+	0% {opacity: 0;}
+
+	100% {opacity: 1;}
+
+}
+
+@keyframes animation-child-modal {
+
+	0% {
+
+		opacity: 0;
+		transform: translateY(-10vh);
+
+	}
+
+	100% {
+
+		opacity: 1;
+		transform: translateY(0);
+
+	}
+
+}
